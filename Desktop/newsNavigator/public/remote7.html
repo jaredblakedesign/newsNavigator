@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Remote</title>
+  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script type="text/javascript" src="js/hammer.js"></script>
+  <style type="text/css">
+  .floating-div {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    }
+    
+  .twitter-timeline {
+      margin: 0, auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="owl-carousel">
+    <div class="item-video" >
+      <img src="images/mobiledevice-07.png"></img>
+      <div class="floating-div"></div>
+    </div>
+    <div class="item-video" >
+      <iframe width="768" height="1024" src="" class="youtube" data-src="https://www.youtube.com/embed/-xiXroQp8t4?autoplay=1" frameborder="0" allowfullscreen></iframe>
+      <div class="floating-div"></div>
+    </div>
+    <div class="item-video" >
+      <a class="twitter-timeline" href="https://twitter.com/hashtag/BostonBombing" data-widget-id="597979876398792704">#BostonBombing Tweets</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <div class="floating-div"></div>
+    </div>
+    <div class="item-video" >
+      <iframe width="768" height="1024" src="http://www.slate.com/articles/news_and_politics/jurisprudence/2015/03/boston_marathon_bombing_trial_video_cameras_shouldn_t_turn_dzhokhar_tsarnaev.html" frameborder="0" allowfullscreen></iframe>
+      <div class="floating-div"></div>
+    </div>
+    <div class="item-video" >
+      <iframe width="768" height="1024" src="http://www.nytimes.com/2015/04/16/us/a-marathon-thats-far-more-than-a-rite-of-spring.html" frameborder="0" allowfullscreen></iframe>
+      <div class="floating-div"></div>
+    </div>
+
+  </div>   
+
+  <script>
+  
+    
+  $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        items:1,
+        merge:true,
+        loop:true,
+        margin:0,
+        video:true,
+        lazyLoad:true,
+        center:true,
+        videoWidth: 768,
+        videoHeight: 1024,
+        stagePadding: 0
+    });
+  });
+  </script>
+    
+    
+  <script src="js/remote.js"></script>
+    
+</body>
+</html>

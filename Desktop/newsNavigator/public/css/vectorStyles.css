@@ -1,0 +1,80 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px/1 'Open Sans', sans-serif;
+  text-align: center;
+  color: black;
+  background: rgb(253, 213, 64);
+  width: 768px;
+  height: 1024px;
+}
+
+.title {
+  padding: 35px 0 40px;
+}
+
+.title span {
+  display: block;
+  margin: 0 0 15px;
+  font-size: 30px;
+}
+
+.iconset {
+  padding: 35px 0 40px;
+  background: rgb(253, 213, 64);
+}
+
+form {
+  padding: 20px;
+}
+
+input, label {
+  cursor: pointer;
+}
+
+label {
+  margin: 0 20px 0 0;
+  vertical-align: middle;
+}
+
+svg {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+}
+
+svg path {
+  fill: #fff;
+}
+
+svg path.inner {
+  fill: #333;
+}
+
+#iconset-black svg path.col {
+  fill: black;
+}
+
+
+
+.switch svg path {
+  fill: none;
+}
+
+.switch svg path.inner {
+  fill: #fff;
+}
+
+
+/*  Begin Custom Styles for Animations  */
+
+.hidden {
+  visibility:hidden;
+}

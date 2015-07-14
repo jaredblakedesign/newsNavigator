@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content=""> 
+
+    <title>Ambient</title>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+</head>
+
+<body>
+  <div class="owl-carousel">
+    <div class="item"> <img src="images/ambient-01.png"></img> </div>
+    <div class="item"> <img src="images/ambient-02.png"></img> </div>
+    <div class="item"> <img src="images/ambient-03.png"></img> </div>
+    <div class="item"> <img src="images/ambient-04.png"></img> </div>
+    <div class="item"> <img src="images/ambient-05.png"></img> </div>
+    <div class="item"> <img src="images/ambient-06.png"></img> </div>
+    <div class="item"> <img src="images/ambient-07.png"></img> </div>
+  </div>
+
+  <script>
+    var mobileWindow;
+
+    function openSecondaryWindow() {
+      return window.open('remote.html', 'secondary', 'width=768,height=1024');
+    }
+
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        // autoplayTimeout: 1000,
+        autoplayTimeout: 20000,
+        items: 1
+      });
+
+      $('.owl-carousel').on('changed.owl.carousel', function(event) {
+        // Runs every time the carousel changes
+        if(event.item.index > 7) {
+          event.item.index = 1;
+        }
+
+        var index = event.item.index;
+        console.log("Changing mobile frame to index:", index);
+        localStorage.setItem('frameIndex', index);
+        mobileWindow.setFrameIndex(index);
+      });
+
+      if (!mobileWindow) {
+        mobileWindow = openSecondaryWindow();
+      }
+      localStorage.setItem('frameIndex', '1');
+    });
+  </script>
+</body>
+</html>
